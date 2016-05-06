@@ -26,3 +26,4 @@ autocmd vimenter * NERDTree
 nnoremap <A-Left> :tabprevious<CR>
 nnoremap <A-Right> :tabnext<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+aaa asdfdgfdggfd
