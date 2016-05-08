@@ -21,8 +21,6 @@ if has("gui_running")
    endif
 endif
 let g:Powerline_symbols = 'fancy'
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set guioptions=aem
 
 "Allow usage of mouse in iTerm
@@ -83,3 +81,27 @@ set hlsearch
 nnoremap <silent> <leader>, :noh<cr> " Stop highlight after searching
 set incsearch
 set showmatch
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+      syntax on
+      endif
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+
+" configure syntastic syntax checking to check on open as well as save
+let g:syntastic_check_on_open=1
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {"regex": "possibly useless use of a variable in void context"}
+
+
+" Remind to use h-j-k-l
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
