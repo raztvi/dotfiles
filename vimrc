@@ -108,3 +108,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" ctrlp support
+set runtimepath^=~/.vim/bundle/ctrlp.vim

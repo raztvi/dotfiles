@@ -1,4 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/nclandrei/Code/c:c++'
-let g:netrw_dirhist_2='/Users/nclandrei/.vim'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/andreinicolae/Code/BackOffice/CashAccountCommon/src/main/scala/com/avarix/backoffice/Messages'
