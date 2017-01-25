@@ -111,3 +111,6 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " ctrlp support
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" rainbow parantheses support
+let g:rainbow_active = 1
