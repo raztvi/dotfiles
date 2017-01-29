@@ -117,3 +117,7 @@ let g:rainbow_active = 1
 
 " added support for Neocomplete (need vim with lua installed)
 let g:neocomplete#enable_at_startup = 1
+
+" disables highlighting search hits
+set nohlsearch
+
