@@ -1,2 +1,2 @@
 # dotfiles
-All my configuration files for vim, zsh, bash, npm... (upcoming: tmux).
+All my config files, including vim, zsh, tmux etc.
