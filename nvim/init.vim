@@ -53,7 +53,7 @@ highlight Comment cterm=italic
 highlight htmlArg cterm=italic
 
 set number                  " show line numbers
-" set relativenumber          " show relative line numbers
+set relativenumber          " show relative line numbers
 
 set wrap                    " turn on line wrapping
 set wrapmargin=8            " wrap lines when coming within n characters from side
@@ -108,7 +108,6 @@ set title                   " set terminal title
 " Searching
 set ignorecase              " case insensitive searching
 set smartcase               " case-sensitive if expresson contains a capital letter
-set hlsearch                " highlight search results
 set incsearch               " set incremental search, like modern browsers
 set nolazyredraw            " don't redraw while executing macros
 
@@ -146,9 +145,6 @@ nmap <leader>, :w<cr>
 
 " set paste toggle
 set pastetoggle=<leader>v
-
-" toggle paste mode
-" map <leader>v :set paste!<cr>
 
 " edit ~/.config/nvim/init.vim
 map <leader>ev :e! ~/.config/nvim/init.vim<cr>
