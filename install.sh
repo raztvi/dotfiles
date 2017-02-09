@@ -45,3 +45,6 @@ if ! command_exists zplug; then
     git clone https://github.com/zplug/zplug ~/.zplug
 fi
 
+echo "adding the xterm italic fonts to the Terminal"
+tic resources/xterm-256color-italic.terminfo
+
