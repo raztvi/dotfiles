@@ -1,6 +1,6 @@
 #### COLOUR
 
-tm_icon="🙊"
+tm_icon="🇷🇴"
 tm_color_active=colour51
 tm_color_inactive=colour241
 tm_color_feature=colour198
