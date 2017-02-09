@@ -17,6 +17,16 @@ set -g status-left-length 32
 set -g status-right-length 150
 set -g status-interval 5
 
+# remap prefix from 'C-b' to 'C-a'
+unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+# split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
 
 # default statusbar colors
 # set-option -g status-bg colour0
@@ -58,3 +68,9 @@ tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
 
 set -g status-left $tm_session_name' '
 set -g status-right $tm_tunes' '$tm_date' '$tm_host
+
+# switch panes using Alt-arrow without prefix
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
