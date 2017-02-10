@@ -15,7 +15,6 @@ formulas=(
     dnsmasq
     fzf
     git
-    'grep --with-default-names'
     heroku
     highlight
     hub
