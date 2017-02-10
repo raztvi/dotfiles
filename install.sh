@@ -48,3 +48,5 @@ fi
 echo "adding the xterm italic fonts to the Terminal"
 tic resources/xterm-256color-italic.terminfo
 
+echo "addign the tmux italic fonts"
+tic tmux-256color-italic.terminfo
