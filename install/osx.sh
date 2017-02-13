@@ -149,6 +149,11 @@ defaults write com.apple.dashboard devmode -bool true
 echo "Show full URL in Safari's address bar"
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
+echo "Making Desktop as the default folder when Finder is opened"
+defaults write com.apple.finder NewWindowTarget -string 'PfDe'
+defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Desktop/'
+
+
 echo "Remove Dropbox’s green checkmark icons in Finder"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
