@@ -168,10 +168,13 @@ defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 echo "Install System data files and security updates in App Store"
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
+echo "Prevent Photos from opening automatically when devices are plugged in"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
 echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
 unset file
 
 echo "Kill affected applications"
-for app in Safari Finder Dock Mail SystemUIServer AppStore; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder Dock Mail SystemUIServer Photos; do killall "$app" >/dev/null 2>&1; done
