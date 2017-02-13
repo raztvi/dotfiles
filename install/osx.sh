@@ -189,6 +189,9 @@ defaults write org.m0k.transmission WarningLegal -bool false
 echo "Disable resume system-wide"
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
+echo "Save screenshots as PNGs"
+defaults write com.apple.screencapture type -string 'png'
+
 echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
