@@ -153,11 +153,25 @@ echo "Making Desktop as the default folder when Finder is opened"
 defaults write com.apple.finder NewWindowTarget -string 'PfDe'
 defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Desktop/'
 
+echo "Enable debug menu in App Store"
+defaults write com.apple.appstore ShowDebugMenu -bool true
 
-echo "Remove Dropbox’s green checkmark icons in Finder"
+echo "Turn on auto-update in App Store"
+defaults write com.apple.commerce AutoUpdate -bool true
+
+echo "Enable automatic update check in App Store"
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+echo "Download newly available updates in background in App Store"
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+echo "Install System data files and security updates in App Store"
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
 unset file
 
 echo "Kill affected applications"
-for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder Dock Mail SystemUIServer AppStore; do killall "$app" >/dev/null 2>&1; done
