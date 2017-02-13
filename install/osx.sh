@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo -e "Setting up OSX preferences"
+echo "Setting up OSX preferences"
 echo "=============================="
 
 echo "Finder: show all filename extensions"
@@ -185,6 +185,9 @@ defaults write org.m0k.transmission WarningDonate -bool false
 
 echo "Transmission - Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
+
+echo "Disable resume system-wide"
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
