@@ -3,19 +3,19 @@
 echo "Setting up OSX preferences"
 echo "=============================="
 
-echo "Finder: show all filename extensions"
+echo "Show all filename extensions in Finder"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-echo "show hidden files by default"
+echo "Show hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
-echo "only use UTF-8 in Terminal.app"
+echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "expand save dialog by default"
+echo "Expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-echo "show the ~/Library folder in Finder"
+echo "Show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
@@ -35,6 +35,9 @@ defaults write com.apple.dock showhidden -bool true
 
 echo "Enable iTunes track notifications in the Dock"
 defaults write com.apple.dock itunes-notifications -bool true
+
+echo "Make crash reports appear as notifications"
+defaults write com.apple.CrashReporter UseUNC 1
 
 echo "Disable menu bar transparency"
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -56,6 +59,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 echo "Expand print panel by default"
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+echo "Automatically quit the printer app once the print jobs are completed"
+defaults write com.apple.print.PrintingPrefs 'Quit When Finished' -bool true
 
 echo "Disable the “Are you sure you want to open this application?” dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
