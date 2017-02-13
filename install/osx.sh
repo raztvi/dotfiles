@@ -171,10 +171,26 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 echo "Prevent Photos from opening automatically when devices are plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
+echo "Transmission - Don’t prompt for confirmation before downloading"
+defaults write org.m0k.transmission DownloadAsk -bool false
+
+echo "Transmission - Don’t prompt for confirmation before downloading for magnet links"
+defaults write org.m0k.transmission MagnetOpenAsk -bool false
+
+echo "Transmission - Use '~/Downloads' to store complete downloads"
+defaults write org.m0k.transmission DownloadChoice -string 'Constant'
+defaults write org.m0k.transmission DownloadFolder -string '$HOME/Downloads'
+
+echo "Transmission - Hide the donate message"
+defaults write org.m0k.transmission WarningDonate -bool false
+
+echo "Transmission - Hide the legal disclaimer"
+defaults write org.m0k.transmission WarningLegal -bool false
+
 echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
 unset file
 
 echo "Kill affected applications"
-for app in Safari Finder Dock Mail SystemUIServer Photos; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder Dock Mail SystemUIServer Photos Transmission; do killall "$app" >/dev/null 2>&1; done
