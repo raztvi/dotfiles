@@ -167,7 +167,6 @@ nmap <leader>md :%!markdown --html4tags <cr>
 " remove extra whitespace
 nmap <leader><space> :%s/\s\+$<cr>
 
-
 nmap <leader>l :set list!<cr>
 
 " Textmate style indentation
