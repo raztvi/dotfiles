@@ -1,9 +1,9 @@
 # gitconfig
 [user]
     name = Andrei-Mihai Nicolae
-    email = andrei.nicolae@avarix.co.uk
+    email = a.mihai.nicolae@gmail.com
 [github]
-    user = amnicolae
+    user = nclandrei
 [init]
     templatedir = ~/.dotfiles/git/templates
 [alias]
