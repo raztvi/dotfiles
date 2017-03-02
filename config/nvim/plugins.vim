@@ -86,6 +86,7 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 
 " language-specific plugins
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
+Plug 'christoomey/vim-tmux-navigator' " pane switching between (n)vim and tmux seamlessly
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'fatih/vim-go', { 'for': 'go' } " go support
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
