@@ -27,6 +27,12 @@ if [ "$(uname)" == "Darwin" ]; then
     ln -s ~/.dotfiles/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf
     # symlink the code.dev from dotfiles
     ln -s ~/.dotfiles/nginx/code.dev /usr/local/etc/nginx/sites-enabled/code.dev
+
+    echo "adding the xterm italic fonts to the Terminal"
+    tic resources/xterm-256color-italic.terminfo
+
+    echo "addign the tmux italic fonts"
+    tic tmux-256color-italic.terminfo
 fi
 
 echo "creating vim directories"
@@ -45,6 +51,4 @@ if ! command_exists zplug; then
     git clone https://github.com/zplug/zplug ~/.zplug
 fi
 
-echo "adding the xterm italic fonts to the Terminal"
-tic resources/xterm-256color-italic.terminfo
 

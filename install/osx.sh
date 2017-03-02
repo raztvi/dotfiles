@@ -1,21 +1,21 @@
 #!/usr/bin/env sh
 
-echo -e "Setting up OSX preferences"
+echo "Setting up OSX preferences"
 echo "=============================="
 
-echo "Finder: show all filename extensions"
+echo "Show all filename extensions in Finder"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-echo "show hidden files by default"
+echo "Show hidden files by default"
 defaults write com.apple.Finder AppleShowAllFiles -bool false
 
-echo "only use UTF-8 in Terminal.app"
+echo "Only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "expand save dialog by default"
+echo "Expand save dialog by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-echo "show the ~/Library folder in Finder"
+echo "Show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
@@ -36,12 +36,14 @@ defaults write com.apple.dock showhidden -bool true
 echo "Enable iTunes track notifications in the Dock"
 defaults write com.apple.dock itunes-notifications -bool true
 
+echo "Make crash reports appear as notifications"
+defaults write com.apple.CrashReporter UseUNC 1
+
 echo "Disable menu bar transparency"
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 echo "Show remaining battery time; hide percentage"
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 echo "Always show scrollbars"
 defaults write NSGlobalDomain AppleShowScrollBars -string "Auto"
@@ -57,6 +59,9 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 echo "Expand print panel by default"
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+echo "Automatically quit the printer app once the print jobs are completed"
+defaults write com.apple.print.PrintingPrefs 'Quit When Finished' -bool true
 
 echo "Disable the “Are you sure you want to open this application?” dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -146,10 +151,57 @@ defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 echo "Enable Dashboard dev mode (allows keeping widgets on the desktop)"
 defaults write com.apple.dashboard devmode -bool true
 
-echo "Remove Dropbox’s green checkmark icons in Finder"
+echo "Show full URL in Safari's address bar"
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+echo "Making Desktop as the default folder when Finder is opened"
+defaults write com.apple.finder NewWindowTarget -string 'PfDe'
+defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Desktop/'
+
+echo "Enable debug menu in App Store"
+defaults write com.apple.appstore ShowDebugMenu -bool true
+
+echo "Turn on auto-update in App Store"
+defaults write com.apple.commerce AutoUpdate -bool true
+
+echo "Enable automatic update check in App Store"
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+
+echo "Download newly available updates in background in App Store"
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+echo "Install System data files and security updates in App Store"
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+echo "Prevent Photos from opening automatically when devices are plugged in"
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+echo "Transmission - Don’t prompt for confirmation before downloading"
+defaults write org.m0k.transmission DownloadAsk -bool false
+
+echo "Transmission - Don’t prompt for confirmation before downloading for magnet links"
+defaults write org.m0k.transmission MagnetOpenAsk -bool false
+
+echo "Transmission - Use '~/Downloads' to store complete downloads"
+defaults write org.m0k.transmission DownloadChoice -string 'Constant'
+defaults write org.m0k.transmission DownloadFolder -string '$HOME/Downloads'
+
+echo "Transmission - Hide the donate message"
+defaults write org.m0k.transmission WarningDonate -bool false
+
+echo "Transmission - Hide the legal disclaimer"
+defaults write org.m0k.transmission WarningLegal -bool false
+
+echo "Disable resume system-wide"
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
+echo "Save screenshots as PNGs"
+defaults write com.apple.screencapture type -string 'png'
+
+echo "Remove Dropbox’s green checkmark icons in Finder in App Store"
 file=/Applications/Dropbox.app/Contents/Resources/check.icns
 [ -e "$file" ] && mv -f "$file" "$file.bak"
 unset file
 
 echo "Kill affected applications"
-for app in Safari Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
+for app in Safari Finder Dock Mail SystemUIServer Photos Transmission; do killall "$app" >/dev/null 2>&1; done
