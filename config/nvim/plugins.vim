@@ -32,6 +32,7 @@ Plug 'tpope/vim-endwise' " automatically add end in ruby
 Plug 'tpope/vim-ragtag' " endings for html, xml, etc. - ehances surround
 Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
 Plug 'benmills/vimux' " tmux integration for vim
+Plug 'christoomey/vim-tmux-navigator' " pane switching between (n)vim and tmux seamlessly
 Plug 'vim-airline/vim-airline' " fancy statusline
 Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plug 'neomake/neomake' " neovim replacement for syntastic using neovim's job control functonality
@@ -86,11 +87,12 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 
 " language-specific plugins
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
-Plug 'christoomey/vim-tmux-navigator' " pane switching between (n)vim and tmux seamlessly
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'fatih/vim-go', { 'for': 'go' } " go support
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
 " Plug 'tclem/vim-arduino' " arduino support - compile wihtout needing to open the arduino IDE
+
+Plug 'lervag/vimtex'
 
 call plug#end()
 
