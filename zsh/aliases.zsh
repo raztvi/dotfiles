@@ -79,5 +79,5 @@ alias canary="/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\
 
 # Used for toggling showing hidden files on macOS
 
-alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles YES"
-alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles NO"
+alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles YES; killAll Finder"
+alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles NO; killAll Finder"
