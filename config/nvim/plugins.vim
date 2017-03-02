@@ -90,9 +90,7 @@ Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'fatih/vim-go', { 'for': 'go' } " go support
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
-" Plug 'tclem/vim-arduino' " arduino support - compile wihtout needing to open the arduino IDE
-
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex' " LaTeX support for vim
+Plug 'tclem/vim-arduino' " arduino support - compile wihtout needing to open the arduino IDE
 
 call plug#end()
-
