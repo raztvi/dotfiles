@@ -1,3 +1,6 @@
+echo -e "\n\nInstalling Homebrew cask"
+brew tap caskroom/cask
+
 echo -e "\n\nInstalling homebrew casks..."
 echo "=============================="
 
@@ -34,6 +37,8 @@ formulas=(
        unetbootin
        textmate
        teamviewer
+       nosleep
+       caffeine
 )
 
 for formula in "${formulas[@]}"; do
