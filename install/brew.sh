@@ -10,17 +10,20 @@ formulas=(
     # flags should pass through the the `brew list check`
     'macvim --with-override-system-vim'
     ack
+    android-sdk
     aws-shell
     diff-so-fancy
     dnsmasq
     fzf
     git
+    gradle
     heroku
     highlight
     hub
     jenkins
     leiningen
     markdown
+    maven
     mongodb
     mysql
     neovim/neovim/neovim
