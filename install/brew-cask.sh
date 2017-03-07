@@ -4,7 +4,7 @@ brew tap caskroom/cask
 echo -e "\n\nInstalling homebrew casks..."
 echo "=============================="
 
-formulas=(
+casks=(
        google-chrome 
        firefox
        1password
@@ -41,10 +41,15 @@ formulas=(
        caffeine
 )
 
-for formula in "${formulas[@]}"; do
-    if brew list "$formula" > /dev/null 2>&1; then
-        echo "$formula already installed... skipping."
+applications=$(/Applications/*)
+
+for cask in "${casks[@]}"; do
+    if brew list "$cask" > /dev/null 2>&1; then
+        echo "$cask already installed... skipping."
     else
-        brew cask install $formula
+        brew cask install $cask
     fi
 done
+
+
+
