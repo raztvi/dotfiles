@@ -87,22 +87,19 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 echo "Disable auto-correct"
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
- echo "Automatically open a new Finder window when a volume is mounted"
- defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
- defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
- defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+echo "Automatically open a new Finder window when a volume is mounted"
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 echo "Increase window resize speed for Cocoa applications"
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
- echo "Disable the warning when changing a file extension"
- defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+echo "Disable the warning when changing a file extension"
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
- echo "Show item info below desktop icons"
- /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-
-# echo "Enable snap-to-grid for desktop icons"
-# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+echo "Show item info below desktop icons"
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
 echo "Disable the warning before emptying the Trash"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -154,9 +151,9 @@ defaults write com.apple.dashboard devmode -bool true
 echo "Show full URL in Safari's address bar"
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
-echo "Making Desktop as the default folder when Finder is opened"
+echo "Making Code as the default folder when Finder is opened"
 defaults write com.apple.finder NewWindowTarget -string 'PfDe'
-defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Desktop/'
+defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/Code/'
 
 echo "Enable debug menu in App Store"
 defaults write com.apple.appstore ShowDebugMenu -bool true
