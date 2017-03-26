@@ -39,6 +39,7 @@ casks=(
        teamviewer
        nosleep
        caffeine
+       canary
 )
 
 applications=$(/Applications/*)
