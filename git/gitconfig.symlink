@@ -138,6 +138,7 @@
     pager = less -FXRS -x2
     editor = vim
     whitespace = cr-at-eol
+	autocrlf = input
 [rerere]
     enabled = true
 [gitsh]
