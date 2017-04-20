@@ -81,3 +81,7 @@ alias canary="/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\
 
 alias showhiddenfiles="defaults write com.apple.finder AppleShowAllFiles YES; killAll Finder"
 alias hidehiddenfiles="defaults write com.apple.finder AppleShowAllFiles NO; killAll Finder"
+
+# youtube-dl helper for downloading mp3s
+
+alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3"

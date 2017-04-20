@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/nclandrei/Code/github/dotfiles/install'
 let g:netrw_dirhist_2='/Users/andreinicolae/.dotfiles/install'
 let g:netrw_dirhist_3='/Users/andreinicolae/.dotfiles/config/nvim/autoload'
 let g:netrw_dirhist_4='/Users/nclandrei/.dotfiles/config/nvim/plugin'
 let g:netrw_dirhist_5='/Users/nclandrei/Code/github/L4-Coursework/.git'
 let g:netrw_dirhist_6='/Users/nclandrei/Code/github/L4-Coursework/.git/info'
+let g:netrw_dirhist_7='/Users/nclandrei/.dotfiles/config/nvim/plugin'
