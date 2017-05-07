@@ -27,6 +27,7 @@ Plug 'mileszs/ack.vim' " search inside files using ack. Same as command line ack
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 " Plug 'jiangmiao/auto-pairs' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'tpope/vim-commentary' " comment stuff out
+Plug 'junegunn/goyo.vim' " plugin for distraction-free writing
 Plug 'tpope/vim-unimpaired' " mappings which are simply short normal mode aliases for commonly used ex commands
 Plug 'tpope/vim-endwise' " automatically add end in ruby
 Plug 'tpope/vim-ragtag' " endings for html, xml, etc. - ehances surround
@@ -83,6 +84,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 " markdown
 Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
+Plug 'shime/vim-livedown' " preview support for markdown
 
 " language-specific plugins
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
@@ -91,6 +93,5 @@ Plug 'fatih/vim-go', { 'for': 'go' } " go support
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
 Plug 'lervag/vimtex' " LaTeX support for vim
 Plug 'tclem/vim-arduino' " arduino support - compile wihtout needing to open the arduino IDE
-Plug 'junegunn/goyo.vim' " plugin for distraction-free writing
 
 call plug#end()
