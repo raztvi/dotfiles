@@ -91,5 +91,6 @@ Plug 'fatih/vim-go', { 'for': 'go' } " go support
 Plug 'timcharper/textile.vim', { 'for': 'textile' } " textile support
 Plug 'lervag/vimtex' " LaTeX support for vim
 Plug 'tclem/vim-arduino' " arduino support - compile wihtout needing to open the arduino IDE
+Plug 'junegunn/goyo.vim' " plugin for distraction-free writing
 
 call plug#end()
