@@ -9,4 +9,3 @@ if application "Spotify" is running then
     end try
   end tell
 end if
-
