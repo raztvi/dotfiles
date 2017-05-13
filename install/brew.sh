@@ -15,19 +15,23 @@ formulas=(
     cockroachdb/cockroach/cockroach
     diff-so-fancy
     dnsmasq
+    ffmpeg
     fzf
     git
+    go
     gradle
     heroku
     highlight
     hub
     jenkins
     leiningen
+    lua
     markdown
     maven
     mongodb
     mysql
     neovim/neovim/neovim
+    node
     nginx
     postgresql
     reattach-to-user-namespace
@@ -37,9 +41,13 @@ formulas=(
     the_silver_searcher
     tmux
     tree
+    watchman
     wget
+    wine
     yarn
+    youtube-dl
     z
+    zplug
     zsh
 )
 
