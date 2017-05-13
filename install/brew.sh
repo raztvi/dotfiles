@@ -12,6 +12,7 @@ formulas=(
     ack
     android-sdk
     aws-shell
+    cockroachdb/cockroach/cockroach
     diff-so-fancy
     dnsmasq
     fzf
